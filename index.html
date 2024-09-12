@@ -32,13 +32,12 @@
    <link rel="stylesheet" href="css/owl.theme.default.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
       media="screen">
-   <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+      <link id="theme-link" rel="stylesheet" href="css/style.css">
 </head>
 <script src="//code.jivosite.com/widget/5vnnPPHtPQ" async></script>
 
 <body>
-   
-        <button id="toggle-button">Modo Escuro</button>
+   <button id="toggle-button">Modo Escuro</button>
     
         <script>
             // Seleciona o botão e o link para a folha de estilo
@@ -46,7 +45,7 @@
             const themeLink = document.getElementById('theme-link');
     
             // Verifica o tema salvo no localStorage ao carregar a página
-            const savedTheme = sessionStorage.getItem('theme');
+            const savedTheme = localStorage.getItem('theme');
             if (savedTheme) {
                 themeLink.href = savedTheme;
                 if (savedTheme === 'css/dark-mode.css') {
@@ -59,11 +58,11 @@
                 if (themeLink.href.includes('style.css')) {
                     themeLink.href = 'css/dark-mode.css'; // Muda para o modo escuro
                     toggleButton.textContent = 'Modo Claro';
-                    sessionStorage.setItem('theme', 'css/dark-mode.css'); // Salva o tema no localStorage
+                    localStorage.setItem('theme', 'css/dark-mode.css'); // Salva o tema no localStorage
                 } else {
                     themeLink.href = 'css/style.css'; // Volta para o modo claro
                     toggleButton.textContent = 'Modo Escuro';
-                    sessionStorage.setItem('theme', 'css/style.css'); // Salva o tema no localStorage
+                    localStorage.setItem('theme', 'css/style.css'); // Salva o tema no localStorage
                 }
             });
         </script>
@@ -103,7 +102,7 @@
    </div>
    <!-- Fim da seção de cabeçalho -->
    <!-- Início da sessão de banner -->
-   <div class="banner_section">
+   <div class="banner_section" >
       <div class="container">
          <div id="main_slider" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -170,7 +169,7 @@
                <div class="row">
                   <div class="col-lg-3 col-sm-6">
                      <div class="service_box">
-                        <div class="building_icon"><img src="images/building-icon.png"></div>
+                        <div class="building_icon"><img src="images/saude-mental.png"></div>
                         <h4 class="residential_text">Importância da Conscientização</h4>
                         <p class="service_text">Setembro Amarelo destaca a importância de falar sobre saúde mental e
                            suicídio. A conscientização ajuda a desestigmatizar o tema, encoraja pessoas a buscar ajuda e
@@ -181,7 +180,7 @@
                   </div>
                   <div class="col-lg-3 col-sm-6">
                      <div class="service_box">
-                        <div class="building_icon"><img src="images/flash-icon.png"></div>
+                        <div class="building_icon"><img src="images/saude-mental2.png"></div>
                         <h4 class="residential_text">Recursos e Apoio Disponível</h4>
                         <p class="service_text">A campanha promove o acesso a recursos e serviços de apoio. Entre os
                            recursos mais importantes estão as linhas de apoio como o Centro de Valorização da Vida
@@ -195,7 +194,7 @@
                   </div>
                   <div class="col-lg-3 col-sm-6">
                      <div class="service_box">
-                        <div class="building_icon"><img src="images/industrial-icon.png"></div>
+                        <div class="building_icon"><img src="images/ind"></div>
                         <h4 class="residential_text">Impacto das Atividades e Eventos</h4>
                         <p class="service_text">Durante o mês de setembro, diversas atividades são organizadas para
                            aumentar a visibilidade e o impacto da campanha. Eventos como palestras, workshops e
@@ -248,6 +247,7 @@
                      e contribuir para a redução do estigma em torno das questões relacionadas à saúde mental e
                      suicídio..</p>
                </div>
+               <img src="images/Luz Interior.jpg">
             </div>
             <div class="col-md-6">
             </div>
