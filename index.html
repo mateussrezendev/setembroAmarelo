@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- fevicon -->
+   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <!-- fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+   <!-- owl stylesheets -->
+   <link rel="stylesheet" href="css/owl.carousel.min.css">
+   <link rel="stylesheet" href="css/owl.theme.default.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+      media="screen">
+      <link id="theme-link" rel="stylesheet" href="css/style.css">
+</head>
+<script src="//code.jivosite.com/widget/5vnnPPHtPQ" async></script>
+
+<body>
+   <button id="toggle-button">Modo Escuro</button>
+    
+        <script>
+            // Seleciona o botão e o link para a folha de estilo
+            const toggleButton = document.getElementById('toggle-button');
+            const themeLink = document.getElementById('theme-link');
+    
+            // Verifica o tema salvo no localStorage ao carregar a página
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                themeLink.href = savedTheme;
+                if (savedTheme === 'css/dark-mode.css') {
+                    toggleButton.textContent = 'Modo Claro';
+                }
+            }
+    
+            // Função para alternar entre os temas
+            toggleButton.addEventListener('click', function() {
+                if (themeLink.href.includes('style.css')) {
+                    themeLink.href = './css/dark-mode.css'; // Muda para o modo escuro
+                    toggleButton.textContent = 'Modo Claro';
+                    localStorage.setItem('theme', './css/dark-mode.css'); // Salva o tema no localStorage
+                } else {
+                    themeLink.href = './css/style.css'; // Volta para o modo claro
+                    toggleButton.textContent = 'Modo Escuro';
+                    localStorage.setItem('theme', './css/style.css'); // Salva o tema no localStorage
+                }
+            });
+        </script>
+   <!-- Início da seção de cabeçalho -->
+   <div class="header_section">
+      <div class="container">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html"><img class="logo" src="images/Setembro-amarelo-logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                     <a class="nav-link" href="index.html">Menu</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#sobre">Sobre nós</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#conscientização">Conscientização</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#depoimento">Depoimentos</a>
+                  </li>
+                  </li>
+                  
+                  <li class="nav-item">
+                     <a class="nav-link" href="./memory-game.html">Jogo</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#contato">contato</a>
+                  </li>
+               </ul>
+               <form class="form-inline my-2 my-lg-0">
+               </form>
+            </div>
+         </nav>
+      </div>
+   </div>
+   <!-- Fim da seção de cabeçalho -->
+   <!-- Início da sessão de banner -->
+   <div class="banner_section" >
+      <div class="container">
+         <div id="main_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <h1 class="banner_taital">O Que é Setembro Amarelo?</h1>
+                           <p class="banner_text"> Setembro Amarelo é uma campanha de conscientização sobre a prevenção
+                              do suicídio. O mês é dedicado a promover a saúde mental e a reduzir o estigma associado ao
+                              suicídio.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <h1 class="banner_taital">Sinais de Alerta e Como Ajudar</h1>
+                           <p class="banner_text">Identifique sinais de alerta de suicídio, como mudanças de
+                              comportamento, isolamento social e expressões de desespero.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <h1 class="banner_taital">Recursos e Apoio Disponível</h1>
+                           <p class="banner_text">Liste organizações e serviços de apoio, como linhas de ajuda, centros
+                              de saúde mental e grupos de apoio. Inclua números de contato, como o CVV (Centro de
+                              Valorização da Vida), disponível 24 horas por dia.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+               <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+               <i class="fa fa-angle-right"></i>
+            </a>
+         </div>
+      </div>
+   </div>
+   <!-- Fim da seção de bannner -->
+   <!-- Início da seção de conscientização -->
+   <Section id="servicis">
+      <div class="service_section layout_padding">
+         <div class="col-sm-12">
+            <h1 class="service_taital" id="conscientização">Audio completo do conteudo <br><br><br></h1>
+         </div>
+         <audio controls src="audio/audioNarr.mp3"></audio>
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-sm-12">
+                  <h1 class="service_taital" id="conscientização">Conscientização</h1>
+               </div>
+            </div>
+            <div class="service_section_2">
+               <div class="row">
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="service_box">
+                        <div class="building_icon"><img src="images/saude-mental.png"></div>
+                        <h4 class="residential_text">Importância da Conscientização</h4>
+                        <p class="service_text">Setembro Amarelo destaca a importância de falar sobre saúde mental e
+                           suicídio. A conscientização ajuda a desestigmatizar o tema, encoraja pessoas a buscar ajuda e
+                           educa a população sobre a gravidade do suicídio. Com mais informação, é possível identificar
+                           sinais de alerta e oferecer apoio adequado a quem precisa.</p>
+                     </div>
+
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="service_box">
+                        <div class="building_icon"><img src="images/saude-mental2.png"></div>
+                        <h4 class="residential_text">Recursos e Apoio Disponível</h4>
+                        <p class="service_text">A campanha promove o acesso a recursos e serviços de apoio. Entre os
+                           recursos mais importantes estão as linhas de apoio como o Centro de Valorização da Vida
+                           (CVV),
+                           que oferece suporte emocional gratuito e confidencial. Além disso, a campanha incentiva a
+                           busca
+                           por terapia, suporte psicológico e grupos de apoio.
+                        </p>
+                     </div>
+
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="service_box">
+                        <div class="building_icon"><img src="images/saude-mental3.png"></div>
+                        <h4 class="residential_text">Impacto das Atividades e Eventos</h4>
+                        <p class="service_text">Durante o mês de setembro, diversas atividades são organizadas para
+                           aumentar a visibilidade e o impacto da campanha. Eventos como palestras, workshops e
+                           caminhadas,
+                           além da iluminação de monumentos com a cor amarela, ajudam a atrair atenção para a causa,
+                           educar
+                           o público e promover uma rede de suporte.</p>
+                     </div>
+
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="service_box">
+                        <div class="building_icon"><img src="images/saude-mental4.png"></div>
+                        <h4 class="residential_text">Desafios e Necessidades Contínuas
+                        </h4>
+                        <p class="service_text">Apesar dos avanços, ainda existem desafios significativos, como a
+                           necessidade de expandir o acesso a serviços de saúde mental e melhorar a formação de
+                           profissionais para lidar com crises. A campanha também enfrenta o desafio de continuar
+                           desestigmatizando o tema e garantir que a informação sobre prevenção e apoio chegue a todas
+                           as
+                           pessoas, especialmente em áreas remotas ou carentes.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </Section>
+   <!-- Fim da seção de conscientização -->
+   <!-- Inicio da seção sobre nós -->
+   <div class="about_section layout_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-12">
+               <h1 class="about_taital" id="sobre">Sobre nós</h1>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="about_section_2 layout_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6">
+               <div class="about_taital_main">
+                  <h1 class="slightly_text">Equipe de desenvolvedores</h1>
+                  <p class="lorem_text">Equipe de programadores com o intuito de conscientizar e prevenir o suicídio por
+                     meio de um site informativo que oferece recursos de apoio emocional, orientações para identificar
+                     sinais de risco, além de proporcionar acesso a redes de atendimento especializado e linhas de
+                     apoio. A plataforma visa promover o bem-estar mental, disseminar informações sobre saúde emocional
+                     e contribuir para a redução do estigma em torno das questões relacionadas à saúde mental e
+                     suicídio..</p>
+               </div>
+            </div>
+            <div class="col-md-6">
+            </div>
+         </div>
+      </div>
+   </div>
+</table>
+   <!-- Fim da seção sobre nós -->
+   <div align="center">
+      <iframe width="70%" height="500px" src="https://www.youtube.com/embed/lTTWJjro2aM?si=D_3aWM9SYABbjfeS"
+         title="YouTube video player" frameborder="0"
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   </div>
+   <!-- Inicio da seção depoimentos -->
+   <div class="testimonial_section layout_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-12">
+               <h1 class="testimonial_taital" id="depoimento">Depoimentos:</h1>
+               <p class="testimonial_text">Alguns depoimentos de pessoas que ja passaram por situações parecidas</p>
+            </div>
+         </div>
+         <div id="my_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="testimonial_section_2">
+                     <div class="testimonial_left">
+                        <div class="client_img"><img src="images/clara.png"></div>
+                     </div>
+                     <div class="testimonial_right">
+                        <h4 class="markro_text">Clara</h4>
+                        <p class="many_text">Olá, sou Clara. Há um ano, estava em um estado profundo de tristeza e
+                           desesperança. A depressão me isolava e eu me sentia perdida. Foi quando decidi procurar ajuda
+                           no CVV (Centro de Valorização da Vida). Através do chat online, comecei a compartilhar meus
+                           sentimentos com voluntários que me ouviram sem julgamentos e me ofereceram apoio essencial.
+
+                           Com o suporte do CVV, comecei a entender melhor meus sentimentos e a encontrar formas de
+                           lidar com a depressão. Fui encorajada a procurar terapia e a buscar atividades que me faziam
+                           bem. Gradualmente, minha situação melhorou e hoje me sinto muito melhor.
+
+                           Se você está enfrentando algo parecido, saiba que o CVV pode oferecer o apoio que você
+                           precisa. Não hesite em buscar ajuda </p>
+                        <div class="quick_icon"><img src="images/quick-icon.png"></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="testimonial_section_2">
+                     <div class="testimonial_left">
+                        <div class="client_img"><img src="images/Lucas.png"></div>
+                     </div>
+                     <div class="testimonial_right">
+                        <h4 class="markro_text">Lucas</h4>
+                        <p class="many_text">Oi, meu nome é Lucas. Há seis meses, eu estava em uma fase muito complicada
+                           da minha vida. Sentia uma angústia constante e não conseguia encontrar um propósito para
+                           seguir em frente. Eu estava cético sobre pedir ajuda, mas então descobri o CVV (Centro de
+                           Valorização da Vida).
+                           Decidi experimentar o chat online e, para minha surpresa, fui recebido com empatia e
+                           compreensão. Os voluntários do CVV me ajudaram a explorar meus sentimentos e a enxergar as
+                           coisas de uma forma diferente. Com o tempo, comecei a implementar mudanças na minha rotina e
+                           a me conectar com pessoas que realmente se importavam comigo.
+                           Graças ao apoio que recebi, hoje me sinto mais esperançoso e tenho uma perspectiva mais
+                           positiva sobre a vida. Se você está passando por uma situação difícil, recomendo fortemente
+                           buscar o apoio do CVV. Eles podem ser o primeiro passo para a recuperação.</p>
+                        <div class="quick_icon"><img src="images/quick-icon.png"></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="testimonial_section_2">
+                     <div class="testimonial_left">
+                        <div class="client_img"><img src="images/mariana.png"></div>
+                     </div>
+                     <div class="testimonial_right">
+                        <h4 class="markro_text">Mariana</h4>
+                        <p class="many_text">Olá, eu sou Mariana. No último ano, minha vida parecia estar desmoronando.
+                           A ansiedade tomou conta e eu me sentia constantemente sobrecarregada. Foi um amigo quem me
+                           sugeriu entrar em contato com o CVV (Centro de Valorização da Vida), e posso dizer que foi
+                           uma das melhores decisões que já tomei.
+                           Participar das conversas com os voluntários do CVV foi um alívio. Eles me ajudaram a
+                           identificar os gatilhos da minha ansiedade e me ensinaram técnicas para gerenciá-la. A
+                           orientação e o apoio que recebi foram fundamentais para que eu começasse a retomar o controle
+                           da minha vida.
+                           Se você está lutando com a ansiedade ou qualquer outro desafio emocional, não hesite em
+                           buscar a ajuda do CVV. Eles estão lá para ajudar e a mudança é possível.</p>
+                        <div class="quick_icon"><img src="images/quick-icon.png"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+               <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+               <i class="fa fa-angle-right"></i>
+            </a>
+         </div>
+      </div>
+   </div>
+   <!-- Fim da seção depoimentos -->
+   <!-- Início da seção contato -->
+   <div class="shop_section layout_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <h1 id="contato" class="shop_taital">Você não esta <span style="color: #f9b116;">Sozinho(a)!</span></h1>
+               <p class="shop_text">entre em contato com o CVV (Centro de Valorização da Vida)</p>
+               <div class="btn_main">
+                  <div class="quote_bt"><a href="#">Retornar</a></div>
+                  <div class="call_bt active"><a href="contact.html">Entre em contato</a></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Fim da seção contato -->
+
+   <!-- Início do rodapé -->
+   <div class="footer_section">
+      <div class="container">
+         <div class="footer_sectio_2">
+            <div class="row">
+               <div class="col-lg-4 col-md-4">
+                  <h2 class="useful_text">Links</h2>
+                  <div class="footer_menu">
+                     <ul>
+                        <li class="active"><a href="index.html">Menu</a></li>
+                        <li><a href="about.html">Sobre nós</a></li>
+                        <li><a href="service.html">Conscientização</a></li>
+                        <li><a href="blog.html">Depoimentos</a></li>
+                        <li><a href="testimonial.html">Contato</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-4">
+                  <h2 class="useful_text">Feito por:</h2>
+                  <p class="footer_text">
+                     Eduardo Henrique de Souza
+                  </p>
+                  <p class="footer_text">
+                     Mateus de Rezende Santos
+                  </p>
+                  <p class="footer_text">
+                     Ryan Lopes Pardini
+                  </p>
+                  <p class="footer_text">
+                     Vinnicius Nucci Galvão
+                  </p>
+                  <div class="social_icon">
+                     <ul>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Fim do rodapé -->
+      <!-- Início da seção de copyright -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">Direitos Reservados</p>
+         </div>
+      </div>
+      <!-- Fim da seção de copyright -->
+      <!-- Javascript arquivos-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- Barra lateral -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+</body>
+
+</html>
