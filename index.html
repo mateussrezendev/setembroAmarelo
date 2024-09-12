@@ -46,7 +46,7 @@
             const themeLink = document.getElementById('theme-link');
     
             // Verifica o tema salvo no localStorage ao carregar a página
-            const savedTheme = localStorage.getItem('theme');
+            const savedTheme = sessionStorage.getItem('theme');
             if (savedTheme) {
                 themeLink.href = savedTheme;
                 if (savedTheme === 'css/dark-mode.css') {
@@ -59,11 +59,11 @@
                 if (themeLink.href.includes('style.css')) {
                     themeLink.href = 'css/dark-mode.css'; // Muda para o modo escuro
                     toggleButton.textContent = 'Modo Claro';
-                    localStorage.setItem('theme', 'css/dark-mode.css'); // Salva o tema no localStorage
+                    sessionStorage.setItem('theme', 'css/dark-mode.css'); // Salva o tema no localStorage
                 } else {
                     themeLink.href = 'css/style.css'; // Volta para o modo claro
                     toggleButton.textContent = 'Modo Escuro';
-                    localStorage.setItem('theme', 'css/style.css'); // Salva o tema no localStorage
+                    sessionStorage.setItem('theme', 'css/style.css'); // Salva o tema no localStorage
                 }
             });
         </script>
