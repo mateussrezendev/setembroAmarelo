@@ -35,49 +35,22 @@
       <link id="theme-link" rel="stylesheet" href="css/style.css">
 </head>
 <script src="//code.jivosite.com/widget/5vnnPPHtPQ" async></script>
-
 <body>
-   <button id="toggle-button">Modo Escuro</button>
-    
-        <script>
-            // Seleciona o botão e o link para a folha de estilo
-            const toggleButton = document.getElementById('toggle-button');
-            const themeLink = document.getElementById('theme-link');
-    
-            // Verifica o tema salvo no localStorage ao carregar a página
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                themeLink.href = savedTheme;
-                if (savedTheme === 'css/dark-mode.css') {
-                    toggleButton.textContent = 'Modo Claro';
-                }
-            }
-    
-            // Função para alternar entre os temas
-            toggleButton.addEventListener('click', function() {
-                if (themeLink.href.includes('style.css')) {
-                    themeLink.href = './css/dark-mode.css'; // Muda para o modo escuro
-                    toggleButton.textContent = 'Modo Claro';
-                    localStorage.setItem('theme', './css/dark-mode.css'); // Salva o tema no localStorage
-                } else {
-                    themeLink.href = './css/style.css'; // Volta para o modo claro
-                    toggleButton.textContent = 'Modo Escuro';
-                    localStorage.setItem('theme', './css/style.css'); // Salva o tema no localStorage
-                }
-            });
-        </script>
    <!-- Início da seção de cabeçalho -->
    <div class="header_section">
       <div class="container">
          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="index.html"><img class="logo" src="images/Setembro-amarelo-logo.png"></a>
+   <button id="toggle-button" class="toggle-button">
+      <img src="./images/diurno.png" alt="Modo Claro" id="image-diurno">
+      <img src="./images/noturno.png" alt="Modo Escuro" id="image-noturno" class="hidden">
+  </button></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item active">
+                  <li class="nav-item">
                      <a class="nav-link" href="index.html">Menu</a>
                   </li>
                   <li class="nav-item">
@@ -155,13 +128,15 @@
          </div>
       </div>
    </div>
+   
    <!-- Fim da seção de bannner -->
    <!-- Início da seção de conscientização -->
    <Section id="servicis">
       <div class="service_section layout_padding">
          <div class="col-sm-12">
-            <h1 class="service_taital" id="conscientização">Audio completo do conteudo <br><br><br></h1>
+            <h1 class="service_taital" id="conscientização">Áudio completo do conteúdo</h1>
          </div>
+         <br><br><br>
          <audio controls src="audio/audioNarr.mp3"></audio>
          <div class="container-fluid">
             <div class="row">
@@ -249,7 +224,7 @@
                      sinais de risco, além de proporcionar acesso a redes de atendimento especializado e linhas de
                      apoio. A plataforma visa promover o bem-estar mental, disseminar informações sobre saúde emocional
                      e contribuir para a redução do estigma em torno das questões relacionadas à saúde mental e
-                     suicídio..</p>
+                     suicídio.</p>
                </div>
             </div>
             <div class="col-md-6">
@@ -258,6 +233,7 @@
       </div>
    </div>
 </table>
+<p>ㅤ</p>
    <!-- Fim da seção sobre nós -->
    <div align="center">
       <iframe width="70%" height="500px" src="https://www.youtube.com/embed/lTTWJjro2aM?si=D_3aWM9SYABbjfeS"
@@ -352,6 +328,98 @@
       </div>
    </div>
    <!-- Fim da seção depoimentos -->
+<!-- Início da seção de filmes sobre o assunto -->
+ <p>ㅤ</p>
+<div class="movies_section layout_padding">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12">
+            <h1 class="movies_taital" id="filmes"></h1>
+            <h1 class="about_taital" id="sobre">Filmes sobre o assunto</h1>
+         </div>
+      </div>
+      <div id="movies_slider" class="carousel slide" data-ride="carousel">
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <div class="movies_section_2">
+                  <div class="movie_left">
+                     <div class="movie_img">
+                        <img src="images/garota-interrompida.jpg" alt="Garota, Interrompida" style="width: 150px; height: 225px;">
+                     </div>
+                  </div>
+                  <div class="movie_right">
+                     <h4 class="markro_text">Garota, Interrompida (1999)</h4>
+                     <p class="many_text">O filme retrata a experiência de Susanna Kaysen em uma instituição psiquiátrica, lidando com questões de saúde mental, como depressão e transtornos de personalidade.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="movies_section_2">
+                  <div class="movie_left">
+                     <div class="movie_img">
+                        <img src="images/o-lado-bom-da-vida.jpg" alt="O lado bom da vida" style="width: 150px; height: 225px;">
+                     </div>
+                  </div>
+                  <div class="movie_right">
+                     <h4 class="markro_text">O lado bom da vida (2012)</h4>
+                     <p class="many_text">Esta história emocionante aborda como o protagonista, Pat, lida com bipolaridade e seu esforço em reconstruir sua vida após uma crise emocional.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="movies_section_2">
+                  <div class="movie_left">
+                     <div class="movie_img">
+                        <img src="images/as-vantagens-de-ser-invisivel.jpg" alt="As vantagens de ser invisível" style="width: 150px; height: 225px;">
+                     </div>
+                  </div>
+                  <div class="movie_right">
+                     <h4 class="markro_text">As vantagens de ser invisível (2012)</h4>
+                     <p class="many_text">Charlie, um jovem tímido, enfrenta os desafios da adolescência e suas lutas internas com traumas passados e problemas de saúde mental.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="movies_section_2">
+                  <div class="movie_left">
+                     <div class="movie_img">
+                        <img src="images/Little_Miss_Sunshine.jpg" alt="Pequena Miss Sunshine" style="width: 150px; height: 225px;">
+                     </div>
+                  </div>
+                  <div class="movie_right">
+                     <h4 class="markro_text">Pequena Miss Sunshine (2006)</h4>
+                     <p class="many_text">A família Hoover embarca em uma viagem emocionante, lidando com problemas pessoais e transtornos mentais de forma leve e ao mesmo tempo tocante.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="movies_section_2">
+                  <div class="movie_left">
+                     <div class="movie_img">
+                        <img src="images/Melancolia.jpg" alt="Melancolia" style="width: 150px; height: 225px;">
+                     </div>
+                  </div>
+                  <div class="movie_right">
+                     <h4 class="markro_text">Melancolia (2011)</h4>
+                     <p class="many_text">Lars von Trier apresenta uma visão profunda e metafórica sobre depressão, enquanto uma família se prepara para o fim do mundo.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Setas de navegação posicionadas abaixo e mais visíveis -->
+         <div class="carousel-controls">
+            <a class="carousel-control-prev" href="#movies_slider" role="button" data-slide="prev">
+               <i class="fa fa-angle-left" style="font-size: 2em; color: #333;"></i>
+            </a>
+            <a class="carousel-control-next" href="#movies_slider" role="button" data-slide="next">
+               <i class="fa fa-angle-right" style="font-size: 2em; color: #333;"></i>
+            </a>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- Fim da seção de filmes sobre o assunto -->
+
    <!-- Início da seção contato -->
    <div class="shop_section layout_padding">
       <div class="container">
@@ -388,18 +456,11 @@
                </div>
                <div class="col-lg-4 col-md-4">
                   <h2 class="useful_text">Feito por:</h2>
-                  <p class="footer_text">
-                     Eduardo Henrique de Souza
-                  </p>
-                  <p class="footer_text">
-                     Mateus de Rezende Santos
-                  </p>
-                  <p class="footer_text">
-                     Ryan Lopes Pardini
-                  </p>
-                  <p class="footer_text">
-                     Vinnicius Nucci Galvão
-                  </p>
+                  <div class="footer_menu">
+                  <li><a href="https://github.com/EduardoDevvSouza">Eduardo Henrique de Souza</a></li>
+                  <li><a href="https://github.com/mateussrezendev">Mateus de Rezende Santos</a></li>
+                  <li><a href="https://github.com/mateussrezendev">Ryan Lopes Pardini</a></li>
+                  <li><a href="https://github.com/mateussrezendev">Vinnicius Nucci Galvão</a></li>
                   <div class="social_icon">
                      <ul>
                      </ul>
@@ -425,6 +486,7 @@
       <!-- Barra lateral -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
+      <script src="js/script.js"></script>
 </body>
 
 </html>
